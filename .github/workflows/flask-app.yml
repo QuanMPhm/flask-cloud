@@ -3,9 +3,7 @@
 
 name: Flask application
 
-on:
-  pull_request:
-    types: [opened, reopened]
+on: pull_request
 
 permissions:
   contents: read
