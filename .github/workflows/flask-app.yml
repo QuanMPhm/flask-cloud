@@ -4,10 +4,8 @@
 name: Flask application
 
 on:
-  push:
-    branches: [ "master" ]
   pull_request:
-    branches: [ "master" ]
+    types: [opened, reopened]
 
 permissions:
   contents: read
