@@ -3,7 +3,7 @@
 
 name: Flask application
 
-on: [pull_request, push]
+on: [pull_request]
 
 permissions:
   contents: read
