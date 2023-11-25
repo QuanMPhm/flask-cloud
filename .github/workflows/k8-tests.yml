@@ -23,6 +23,9 @@ jobs:
       run:
         kubectl apply -k ./k8
 
+    - name: Wait for pods to be running
+      run: kubectl wait --for=condition=Available=True deployment/flask-app
+
     - name: Test service URLs
       run: |
         minikube service list
