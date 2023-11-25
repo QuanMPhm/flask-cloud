@@ -1,6 +1,7 @@
-name: CI
+name: Test minikube
 on:
   - pull_request
+  - workflow_dispatch
 jobs:
   job1:
     runs-on: ubuntu-latest
@@ -21,7 +22,7 @@ jobs:
     - name: Deploy to minikube
       run:
         kubectl apply -k ./k8
-        
+
     - name: Test service URLs
       run: |
         minikube service list
